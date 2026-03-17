@@ -1,8 +1,22 @@
 /* --- General Styles --- */
-body {
-  background-color: #f8f9fa;
+html {
+  height: 100%;
 }
 
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* raste i go turka footer dolu */
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Cards --- */
 .card {
   height: auto;
 }
@@ -36,7 +50,7 @@ body {
 }
 
 /* Summary card on the right */
-.col-md-4 .card {
+.col-lg-4 .card {
   position: sticky;
   top: 20px;
   z-index: 100;
@@ -44,18 +58,18 @@ body {
 }
 
 /* Hover effect for summary card */
-.col-md-4 .card:hover {
+.col-lg-4 .card:hover {
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
   transform: translateY(-2px);
 }
 
 /* --- Responsive adjustments --- */
 @media (max-width: 768px) {
-  .col-md-4 {
+  .col-lg-4 {
     margin-top: 2rem;
   }
 
-  .col-md-4 .card {
+  .col-lg-4 .card {
     position: static; /* disable sticky on mobile */
     top: auto;
   }
@@ -116,4 +130,18 @@ body {
   line-height: 1;
   user-select: none;
   pointer-events: none;
+}
+
+/* --- Footer Styling --- */
+footer {
+  background-color: #6c757d;
+  color: #fff;
+  padding: 2rem 0;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
 }
