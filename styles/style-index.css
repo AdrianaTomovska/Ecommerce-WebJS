@@ -144,7 +144,7 @@ main .d-flex.justify-content-end {
 
 }
   
-  /* List view - помала слика на мобилни */
+  /* List view - mobile */
   #resultContainer.list-view .card {
     flex-direction: row;
   }
