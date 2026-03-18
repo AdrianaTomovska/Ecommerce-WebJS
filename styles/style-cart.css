@@ -1,0 +1,124 @@
+/* --- General Styles --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Cart Page Title --- */
+#cartTitle {
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* --- Cart Items --- */
+#cartContainer .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#cartContainer .card img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+#cartContainer .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Summary Card --- */
+#cartSummary {
+  position: sticky;
+  top: 20px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  #cartSummary {
+    position: static;
+    top: auto;
+    margin-top: 2rem;
+  }
+
+  #cartContainer .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #cartContainer .card img {
+    margin: 0 auto 1rem auto;
+  }
+}
+
+/* --- Cart Icon --- */
+.cart-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.7rem;
+  border: none;
+  padding: 0;
+}
+
+.cart-icon .bi-cart {
+  font-size: 1.7rem;
+}
+
+#cart-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.25em 0.5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(50%, -50%);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #6c757d;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
